@@ -88,11 +88,12 @@ console.log("all User From Mongo ", users)
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://api.maptiler.com/maps/basic-v2/256/{z}/{x}/{y}.png?key=o3GZ6RYoztYy06uz2mmf"
         />
-        {cities.map((city, idx) => (
-          <Marker position={[city.lat, city.lng]} icon={markerIcon} key={idx}>
+        {users.map((user, idx) => (
+          <Marker position={user.location} icon={markerIcon} key={idx}>
             <Popup>
+             
               <b>
-                {city.city}, {city.country}
+                {user.first_name}
               </b>
             </Popup>
           </Marker>

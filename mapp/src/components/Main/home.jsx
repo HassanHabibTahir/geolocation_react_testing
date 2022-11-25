@@ -11,7 +11,7 @@ export const Home = () => {
       <div className="w-full ">
         <div className="w-[90%] mx-auto flex justify-center items-center bg-[#F8FAFC]">
           <div className="w-[40%] h-[550px]  p-5">
-            Click on Map to Add Location in
+            Click on Map to Add Current Location
             <CurrentLocation />
           </div>
           <div className="w-[50%]">

@@ -100,7 +100,7 @@ useEffect(()=>{
     <>
       <MapContainer
         center={loc || { lat: 0, lng: 0 }}
-        zoom={loc ? 12 : 3}
+        zoom={loc ? 12 : 2}
         zoomControl={false}
         style={{ height: "60vh" }}
       >
@@ -108,7 +108,7 @@ useEffect(()=>{
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://api.maptiler.com/maps/basic-v2/256/{z}/{x}/{y}.png?key=o3GZ6RYoztYy06uz2mmf"
         />
-        {cities.map((city, idx) => (
+        {/* {cities.map((city, idx) => (
           <Marker position={[city.lat, city.lng]} icon={markerIcon} key={idx}>
             <Popup>
               <b>
@@ -116,13 +116,14 @@ useEffect(()=>{
               </b>
             </Popup>
           </Marker>
-        ))}
+        ))} */}
 
         <LocationMarker setLocationData={setLocationData}/>
         <Test location={loc} search={search} />
       </MapContainer>
       <div className=" space-y-3 flex flex-col">
-        {loc?.lat},{loc?.lng}
+       <p className="my-2">Add Manually Location</p>
+        {/* {loc?.lat},{loc?.lng} */}
         <input
           className="p-2 my-3"
           placeholder="№,street,zip,city,country"
