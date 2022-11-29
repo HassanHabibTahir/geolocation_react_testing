@@ -18,7 +18,7 @@ export const RegisterUser = async(data)=>{
 
 export const LoginUser = async(data)=>{
 
-  console.log("input login data",data)
+  // console.log("input login data",data)
     try{
       // console.log("listening to addUser", data)
       return await axios.post(`${URL}/login`, data)
