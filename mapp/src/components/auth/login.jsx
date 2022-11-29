@@ -20,7 +20,7 @@ export const Login = () => {
       let res = await LoginUser(user);
       if(res){
 
-        console.log("responce", res.data);
+        // console.log("responce", res.data);
         navigate("/alluser")
         
         setUser(inpvalues);

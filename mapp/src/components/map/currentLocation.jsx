@@ -74,15 +74,12 @@ export const CurrentLocation = () => {
   const [locationData, setLocationData] = useState([]);
   // console.log("location GEt From ====>>", locationData)
   // console.log("both locations", loc);
-useEffect(()=>{
 
-
-},[])
   useEffect(() => {
     const geocoder = L.Control.Geocoder.nominatim();
     if (search)
       geocoder.geocode(search, (results) => {
-        //console.log(results);
+        console.log(results);
         var r = results[0];
         if (r) {
           const { lat, lng } = r?.center;
@@ -108,15 +105,7 @@ useEffect(()=>{
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://api.maptiler.com/maps/basic-v2/256/{z}/{x}/{y}.png?key=o3GZ6RYoztYy06uz2mmf"
         />
-        {/* {cities.map((city, idx) => (
-          <Marker position={[city.lat, city.lng]} icon={markerIcon} key={idx}>
-            <Popup>
-              <b>
-                {city.city}, {city.country}
-              </b>
-            </Popup>
-          </Marker>
-        ))} */}
+       
 
         <LocationMarker setLocationData={setLocationData}/>
         <Test location={loc} search={search} />

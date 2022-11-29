@@ -55,7 +55,7 @@ export const AllUser = () => {
         }
       };
     
-console.log("all User From Mongo ", users)
+// console.log("all User From Mongo ", users)
 
   useEffect(() => {
     const geocoder = L.Control.Geocoder.nominatim();
